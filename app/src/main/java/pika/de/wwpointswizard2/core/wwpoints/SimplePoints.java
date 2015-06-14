@@ -4,7 +4,7 @@ package pika.de.wwpointswizard2.core.wwpoints;
  * Created by pika on 14.06.15.
  */
 public class SimplePoints implements PointsCalculator {
-    private final int kcal;
+    private final double kcal;
     private final double fat;
 
     public SimplePoints(int kcal, double fat) {
@@ -12,7 +12,7 @@ public class SimplePoints implements PointsCalculator {
         this.fat = fat;
     }
 
-    public int getKcal() {
+    public double getKcal() {
         return this.kcal;
     }
 
