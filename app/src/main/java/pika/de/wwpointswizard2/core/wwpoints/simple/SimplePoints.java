@@ -1,4 +1,7 @@
-package pika.de.wwpointswizard2.core.wwpoints;
+package pika.de.wwpointswizard2.core.wwpoints.simple;
+
+import pika.de.wwpointswizard2.core.wwpoints.PointArithmetic;
+import pika.de.wwpointswizard2.core.wwpoints.Points;
 
 /**
  * Created by pika on 14.06.15.
