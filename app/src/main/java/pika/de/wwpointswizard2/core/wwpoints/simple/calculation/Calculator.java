@@ -10,6 +10,14 @@ public class Calculator {
     private DietTarget target;
     private double weight;
 
+    public Calculator(BodySize bodySize, Gender gender, Motion motion, DietTarget target, double weight) {
+        this.bodySize = bodySize;
+        this.gender = gender;
+        this.motion = motion;
+        this.target = target;
+        this.weight = weight;
+    }
+
     public double calculatePoints() {
         return gender.getPoints() +
                 bodySize.getPoints() +
