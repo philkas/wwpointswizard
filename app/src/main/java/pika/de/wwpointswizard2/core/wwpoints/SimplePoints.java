@@ -3,7 +3,7 @@ package pika.de.wwpointswizard2.core.wwpoints;
 /**
  * Created by pika on 14.06.15.
  */
-public class SimplePoints implements PointsCalculator {
+public class SimplePoints implements Points {
     private final double kcal;
     private final double fat;
 
