@@ -1,6 +1,4 @@
-package pika.de.wwpointswizard2.core.wwpoints.simple;
-
-import com.google.inject.Inject;
+package pika.de.wwpointswizard2.core.wwpoints.simple.point;
 
 import pika.de.wwpointswizard2.core.wwpoints.PointArithmetic;
 import pika.de.wwpointswizard2.core.wwpoints.Points;

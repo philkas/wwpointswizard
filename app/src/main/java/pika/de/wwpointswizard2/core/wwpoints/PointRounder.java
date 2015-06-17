@@ -1,4 +1,4 @@
-package pika.de.wwpointswizard2.core.wwpoints.simple;
+package pika.de.wwpointswizard2.core.wwpoints;
 
 /**
  * Created by pika on 17.06.15.

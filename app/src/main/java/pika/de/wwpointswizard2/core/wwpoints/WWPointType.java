@@ -1,9 +1,6 @@
 package pika.de.wwpointswizard2.core.wwpoints;
 
-import com.google.inject.Inject;
-
-import pika.de.wwpointswizard2.core.wwpoints.simple.IdentityRounder;
-import pika.de.wwpointswizard2.core.wwpoints.simple.PointRounder;
+import pika.de.wwpointswizard2.core.wwpoints.simple.point.IdentityRounder;
 
 /**
  * Created by pika on 17.06.15.
