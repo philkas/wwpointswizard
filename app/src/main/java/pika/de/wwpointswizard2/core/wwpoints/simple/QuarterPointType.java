@@ -32,7 +32,7 @@ public class QuarterPointType implements WWPointType {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         QuarterPointType that = (QuarterPointType) o;
-        return Objects.equals(internalPoints, that.internalPoints);
+        return internalPoints == that.internalPoints;
     }
 
     @Override
