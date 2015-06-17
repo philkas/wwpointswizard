@@ -1,5 +1,7 @@
 package pika.de.wwpointswizard2.services;
 
+import pika.de.wwpointswizard2.core.wwpoints.Points;
+
 /**
  * Created by pika on 14.06.15.
  */
@@ -10,7 +12,7 @@ public interface SimplePointCalculation {
      * @param fat amount of fat
      * @return the ww points
      */
-    double calcSimplePoints(double kcal, double fat);
+    Points calcSimplePoints(double kcal, double fat);
 
     /**
      * calculate the relative points
@@ -20,5 +22,5 @@ public interface SimplePointCalculation {
      * @param targetValue the target amount of the food wished to eat
      * @return
      */
-    double calcRelativePoints(double kcal, double fat, double baseValue, double targetValue);
+    Points calcRelativePoints(double kcal, double fat, double baseValue, double targetValue);
 }

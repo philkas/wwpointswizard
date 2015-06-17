@@ -40,7 +40,7 @@ public class SimplePoints implements Points, PointArithmetic {
     }
 
     @Override
-    public Points multiply(double factor) {
+    public SimplePoints multiply(double factor) {
         return new SimplePoints(this.kcal * factor, this.fat * factor);
     }
 }
