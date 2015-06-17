@@ -8,7 +8,7 @@ import pika.de.wwpointswizard2.core.wwpoints.PointRounder;
 public class QuarterRounder implements PointRounder {
     @Override
     public double round(double points) {
-        int intPoints = (int) (points * 2.0);
+        double intPoints = Math.round(points * 2.0);
         return intPoints / 2.0;
     }
 }
