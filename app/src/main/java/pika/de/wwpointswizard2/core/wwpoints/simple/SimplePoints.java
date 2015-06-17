@@ -1,7 +1,10 @@
 package pika.de.wwpointswizard2.core.wwpoints.simple;
 
+import com.google.inject.Inject;
+
 import pika.de.wwpointswizard2.core.wwpoints.PointArithmetic;
 import pika.de.wwpointswizard2.core.wwpoints.Points;
+import pika.de.wwpointswizard2.core.wwpoints.WWPointType;
 
 /**
  * Created by pika on 14.06.15.
@@ -24,18 +27,18 @@ public class SimplePoints implements Points, PointArithmetic {
     }
 
     @Override
-    public double calculatePoints() {
-        return getKcal() / 60.0 + getFat() / 9.0;
+    public WWPointType calculatePoints() {
+        return new WWPointType(getKcal() / 60.0 + getFat() / 9.0);
     }
 
     @Override
-    public double add(Points points) {
-        return this.calculatePoints() + points.calculatePoints();
+    public WWPointType add(Points points) {
+        return this.calculatePoints().add(points.calculatePoints());
     }
 
     @Override
-    public double sub(Points points) {
-        return this.calculatePoints() - points.calculatePoints();
+    public WWPointType sub(Points points) {
+        return this.calculatePoints().sub(points.calculatePoints());
     }
 
     @Override

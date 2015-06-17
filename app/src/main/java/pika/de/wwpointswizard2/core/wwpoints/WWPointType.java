@@ -1,10 +1,37 @@
 package pika.de.wwpointswizard2.core.wwpoints;
 
+import com.google.inject.Inject;
+
+import pika.de.wwpointswizard2.core.wwpoints.simple.IdentityRounder;
+import pika.de.wwpointswizard2.core.wwpoints.simple.PointRounder;
+
 /**
  * Created by pika on 17.06.15.
  */
-public abstract class WWPointType implements Comparable<WWPointType> {
-    public abstract double getPointValue();
+public class WWPointType implements Comparable<WWPointType> {
+    private double points;
+
+    private static PointRounder pointRounder = new IdentityRounder();
+
+    public static void setPointRounder(final PointRounder rounder) {
+        pointRounder = rounder;
+    }
+
+    public WWPointType(final double points) {
+        this.points = pointRounder.round(points);
+    }
+
+    public double getPointValue() {
+        return points;
+    }
+
+    public WWPointType add(final WWPointType other) {
+        return new WWPointType(this.points + other.points);
+    }
+
+    public WWPointType sub(final WWPointType other) {
+        return new WWPointType(this.points - other.points);
+    }
 
     @Override
     public int compareTo(final WWPointType another) {
