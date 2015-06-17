@@ -7,7 +7,7 @@ import pika.de.wwpointswizard2.core.wwpoints.WWPointType;
 /**
  * Created by pika on 17.06.15.
  */
-public class QuarterPointType implements WWPointType, Comparable<Integer> {
+public class QuarterPointType extends WWPointType {
     /**
      * Internal representation of a point. In this case it is an integer which stores the points
      * value. The value is doubled for rounding.
@@ -38,10 +38,5 @@ public class QuarterPointType implements WWPointType, Comparable<Integer> {
     @Override
     public int hashCode() {
         return ((Integer) internalPoints).hashCode();
-    }
-
-    @Override
-    public int compareTo(Integer another) {
-        return ((Integer) internalPoints).compareTo(another);
     }
 }
