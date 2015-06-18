@@ -2,8 +2,27 @@
     <string name="app_name">WWPointsWizard2</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="kcal">Kilokalorien</string>
-    <string name="fat">Fett</string>
+    <string name="kcal">Kilokalorien:</string>
+    <string name="fat">Fett:</string>
     <string name="calcButton">Punkte berechnen</string>
     <string name="points">Punkte:</string>
+    <string name="sugar">Zucker</string>
+    <string name="protein">Eiweiß</string>
+    <string name="barcode">Barcode</string>
+    <string name="name">Beschreibung</string>
+    <string name="amount">Menge</string>
+    <string name="unit">Einheit</string>
+
+    <string-array name="units">
+        <item>Kilograms</item>
+        <item>Grams</item>
+        <item>Litre</item>
+        <item>Millilitre</item>
+        <item>Tablespoon</item>
+        <item>Teaspoon</item>
+        <item>Portion</item>
+    </string-array>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
