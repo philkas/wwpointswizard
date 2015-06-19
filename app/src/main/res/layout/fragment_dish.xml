@@ -1,13 +1,13 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" tools:context="pika.de.wwpointswizard2.gui.DishFragment">
+    android:layout_height="match_parent" tools:context="pika.de.wwpointswizard2.gui.MainActivity">
 
     <!-- TODO: Update blank fragment layout -->
 
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="189dp"
-        android:layout_height="wrap_content">
+        android:layout_width="wrap_content"
+        android:layout_height="380dp">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -144,7 +144,7 @@
 
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="match_parent"
+            android:layout_width="349dp"
             android:layout_height="36dp">
 
             <TextView
@@ -162,9 +162,10 @@
                 android:id="@+id/edtAmount" />
 
             <Spinner
-                android:layout_width="154dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/spinPortionUnit" />
+
         </LinearLayout>
 
     </LinearLayout>

@@ -32,13 +32,15 @@ public class DishFragment extends Fragment implements AdapterView.OnItemSelected
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_dish, container, false);
-        Spinner portionUnitSpinner = getPortionUnitSpinner();
+        Spinner portionUnitSpinner = getPortionUnitSpinner(view);
         portionUnitSpinner.setOnItemSelectedListener(this);
+        portionUnitSpinner.setPrompt("select unit");
+        portionUnitSpinner.setAdapter(getSpinnerItemAdapter());
         return view;
     }
 
-    private Spinner getPortionUnitSpinner() {
-        return (Spinner) getActivity().findViewById(R.id.spinPortionUnit);
+    private Spinner getPortionUnitSpinner(View view) {
+        return (Spinner) (view.findViewById(R.id.spinPortionUnit));
     }
 
     private ArrayAdapter<String> getSpinnerItemAdapter() {
@@ -46,7 +48,7 @@ public class DishFragment extends Fragment implements AdapterView.OnItemSelected
                 this.getActivity(),
                 android.R.layout.simple_spinner_item,
                 dishService.getPortionShortnames());
-        adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         return adapter;
     }
 
