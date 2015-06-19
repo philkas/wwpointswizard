@@ -12,13 +12,14 @@ import android.widget.Spinner;
 
 import pika.de.wwpointswizard2.R;
 import pika.de.wwpointswizard2.services.DishService;
+import pika.de.wwpointswizard2.services.impl.DishServiceImpl;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class DishFragment extends Fragment implements AdapterView.OnItemSelectedListener {
-    private DishService dishService;
+    private DishService dishService = new DishServiceImpl();
 
 
     public DishFragment() {
