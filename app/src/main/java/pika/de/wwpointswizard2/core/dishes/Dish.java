@@ -8,7 +8,15 @@ import pika.de.wwpointswizard2.core.wwpoints.WWPointType;
  * Created by pika on 18.06.15.
  */
 public class Dish {
+    private Long id;
     private String name;
+    private int kcal;
+    private BigDecimal fat;
+    private BigDecimal sugar;
+    private BigDecimal protein;
+    private WWPointType points;
+    private String barcode;
+    private Portion portion;
 
     public String getName() {
         return name;
@@ -83,18 +91,15 @@ public class Dish {
         this.portion = portion;
     }
 
-    private int kcal;
-    private BigDecimal fat;
-    private BigDecimal sugar;
-    private BigDecimal protein;
-    private WWPointType points;
-    private String barcode;
-    private Portion portion;
-
     public Dish(String name, WWPointType points, Portion portion) {
+        this(null, name, points, portion);
+    }
+
+    public Dish(Long id, String name, WWPointType points, Portion portion) {
         setName(name);
         setPoints(points);
         setPortion(portion);
+        this.id = id;
     }
 
 }
